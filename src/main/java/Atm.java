@@ -4,7 +4,7 @@ public class Atm {
     Display display;
     Output output;
     Input input;
-
+    ServerConnection serverConnection;
 
     public void insertCard(){
         cardReader.waitForCard();
@@ -20,8 +20,8 @@ public class Atm {
             return false;
     }
 
-    public Operation selectOperation(){
-        Operation operation = display.getOperation();
+    public String selectOperation(){
+        String operation = display.getOperation();
         return operation;
     }
 
@@ -29,7 +29,13 @@ public class Atm {
         double amount = display.getWithdrawlAmount();
         return amount;
     }
-    
 
+    public boolean checkAmount(){
+        double availableAmount = serverConnection.getAvailableAmount();
+        if (selectWithdrawlAmount() < availableAmount)
+            return true;
+        else
+            return false;
+    }
 
 }
