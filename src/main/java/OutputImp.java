@@ -13,7 +13,7 @@ public class OutputImp implements Output {
     }
 
     @Override
-    public void withdraw() {
-
+    public void withdraw(double amount) {
+        balance-=amount;
     }
 }
