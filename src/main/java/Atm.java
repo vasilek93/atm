@@ -1,9 +1,9 @@
 
 public class Atm {
 
-    CardReader cardReader;
-    Display display;
-    Output output;
+    CardReader cardReader = new CardReaderImpl();
+    Display display = new DisplayImpl();
+    Output output = new OutputImpl();
     Input input;
     ServerConnection serverConnection;
 
@@ -39,6 +39,10 @@ public class Atm {
             return false;
     }
 
+    public double getAvailableAmount(){
+        return serverConnection.getBalance();
+    }
+
 
     public String showError() {
         String s1 = display.getError();
@@ -46,8 +50,13 @@ public class Atm {
     }
 
     public void withdraw() {
+        output.withdraw(display.getWithdrawAmount());
+        serverConnection.updateBalance(-display.getWithdrawAmount());
+    }
 
-
+    public void addMoney(){
+        double amount = input.countMoney();
+        serverConnection.updateBalance(amount);
     }
 }
 
