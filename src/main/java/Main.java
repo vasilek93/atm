@@ -15,7 +15,7 @@ public class Main {
                 giveMoney(atm);
             if (atm.selectOperation().equals("Take Money"))
                 addMoney(atm);
-            if (atm.selectOperation().equals("Take Money"))
+            if (atm.selectOperation().equals("Show Amount"))
                 showUserAmount(atm);
         }
         else atm.showError("Incorrect pin!");
