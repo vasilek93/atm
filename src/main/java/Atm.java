@@ -32,7 +32,7 @@ public class Atm {
     }
 
     public boolean checkAmount() {
-        double availableAmount = serverConnection.getAvailableAmount();
+        double availableAmount = serverConnection.getBalance();
         if (selectWithdrawAmount() < availableAmount)
             return true;
         else
