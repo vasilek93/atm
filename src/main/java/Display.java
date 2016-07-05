@@ -9,4 +9,5 @@ public interface Display {
     double getWithdrawAmount();
 
     String getError();
+
 }

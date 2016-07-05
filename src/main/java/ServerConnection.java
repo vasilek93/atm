@@ -4,4 +4,5 @@
 public interface ServerConnection {
 
    public double getAvailableAmount();
+
 }
