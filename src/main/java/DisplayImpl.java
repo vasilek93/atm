@@ -2,6 +2,9 @@
  * Created by alina.vasilevska on 7/5/2016.
  */
 public class DisplayImpl implements Display {
+
+    private String operation;
+
     @Override
     public String getUserPin() {
         return null;
@@ -13,7 +16,7 @@ public class DisplayImpl implements Display {
     }
 
     @Override
-    public double getWithdrawlAmount() {
+    public double getWithdrawAmount() {
         return 0;
     }
 

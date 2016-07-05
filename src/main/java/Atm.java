@@ -21,8 +21,6 @@ public class Atm {
             return false;
     }
 
-
-
     public String selectOperation() {
         String operation = display.getOperation();
         return operation;
@@ -42,10 +40,14 @@ public class Atm {
     }
 
 
-
     public String showError() {
         String s1 = display.getError();
         return s1;
+    }
+
+    public void withdraw() {
+
+
     }
 }
 

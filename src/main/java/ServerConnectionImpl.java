@@ -4,6 +4,7 @@
 public class ServerConnectionImpl implements ServerConnection {
 
 
+
     @Override
     public double getAvailableAmount() {
         return 100;
