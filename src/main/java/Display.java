@@ -8,6 +8,6 @@ public interface Display {
 
     double getWithdrawAmount();
 
-    String getError();
+    String showError(String error);
 
 }

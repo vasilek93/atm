@@ -9,4 +9,14 @@ public class InputImpl implements Input {
     public double insertMoney(double amount) {
         return amount;
     }
+
+    @Override
+    public void addMoney() {
+
+    }
+
+    @Override
+    public double countMoney() {
+        return 0;
+    }
 }

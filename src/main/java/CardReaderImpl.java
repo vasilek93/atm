@@ -12,6 +12,7 @@ public class CardReaderImpl implements CardReader{
     public void waitForCard() {
         System.out.println("Please insert your card...");
 
+
     }
 
     public boolean isCardIn(){
@@ -23,10 +24,17 @@ public class CardReaderImpl implements CardReader{
         else
             return false;
 
+
     }
 
     @Override
     public Card getCard() {
+
+        Card card = new Card();
+        card.setName("Alina");
+        card.setPin("1234");
+        System.out.println("Card inserted!");
+
         return card;
     }
 
