@@ -5,11 +5,9 @@ public class Main {
 
     public static void main(String[] args) {
         Atm atm = new Atm();
-
-
-
-
+        Card card = new Card("Alina", "1234");
         atm.insertCard();
+
         if (atm.checkPin()) {
             if (atm.selectOperation().equals("Give Money"))
                 giveMoney(atm);
@@ -24,7 +22,7 @@ public class Main {
 
 
     public static void addMoney(Atm atm){
-        atm.addMoney();
+       // atm.addMoney();
 
     }
 

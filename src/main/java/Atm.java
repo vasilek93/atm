@@ -54,9 +54,5 @@ public class Atm {
         serverConnection.updateBalance(-display.getWithdrawAmount());
     }
 
-    public void addMoney(){
-        double amount = input.countMoney();
-        serverConnection.updateBalance(amount);
-    }
 }
 

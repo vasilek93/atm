@@ -5,7 +5,4 @@ public interface Input {
 
     double insertMoney(double amount);
 
-    void addMoney();
-
-    double countMoney();
 }
