@@ -14,7 +14,7 @@ public class Atm {
 
     public boolean checkPin() {
         Card card = cardReader.getCard();
-        String userPin = display.getUserPin();
+        String userPin = display.getPin();
         if (userPin.equals(card.getPin())) {
             System.out.print("Your pin is correct!");
             return true;
@@ -58,8 +58,20 @@ public class Atm {
     }
 
     public void addMoney() {
-        serverConnection.updateBalance(input.insertMoney(200));
+        serverConnection.updateBalance(input.insertMoney(display.getWithdrawAmount()));
 
+    }
+
+    public void askForPin() {
+        display.askForPin();
+    }
+
+    public void askForOperation() {
+        display.askForOperation();
+    }
+
+    public void askForAmount() {
+        display.askForAmount();
     }
 }
 

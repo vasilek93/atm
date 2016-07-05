@@ -1,26 +1,24 @@
-/**
- * Created by alina.vasilevska on 7/5/2016.
- */
+import java.util.Scanner;
+
 public class DisplayImpl implements Display {
 
+    private String pin;
     private String operation;
+    private double amount;
+
 
     @Override
-    public String getUserPin() {
-        System.out.println("You entered pin: 1234");
-        return "1234";
+    public String getPin() {
+        return pin;
     }
 
     @Override
     public String getOperation() {
-        System.out.println("Selected operation is: Give Money");
-        return "Give Money";
+        return operation;
     }
 
     @Override
     public double getWithdrawAmount() {
-        double amount = 50;
-        System.out.println("You want to get: "+amount + " eur");
         return amount;
     }
 
@@ -30,4 +28,33 @@ public class DisplayImpl implements Display {
         System.out.println(error);
         return error;
     }
+
+    @Override
+    public void askForPin() {
+        System.out.print("Please enter Your pin: ");
+        Scanner s = new Scanner(System.in);
+        pin = s.next();
+        //s.close();
+        System.out.println("You entered pin: "+ pin);
+    }
+
+    @Override
+    public void askForOperation() {
+        System.out.print("Please enter Your operation: ");
+        Scanner s = new Scanner(System.in);
+        operation = s.nextLine();
+        // s.close();
+        System.out.println("Selected operation is:" + operation);
+    }
+
+    @Override
+    public void askForAmount() {
+        System.out.print("Please enter amount You want to get/add: ");
+        Scanner s = new Scanner(System.in);
+        amount = Double.parseDouble(s.nextLine());
+        //s.close();
+        System.out.println("You want to get/add: " + amount);
+    }
+
+
 }
