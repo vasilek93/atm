@@ -3,7 +3,9 @@
  */
 public interface ServerConnection {
 
-   public double getAvailableAmount();
+   public double getBalance();
+   public void updateBalance(double amount);
+
 
 
 }
