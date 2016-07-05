@@ -6,12 +6,14 @@ public class CardReaderImpl implements CardReader{
 
     @Override
     public void waitForCard() {
-
+        System.out.print("Please insert your card...");
     }
 
     @Override
     public Card getCard() {
-
-        return null;
+        Card card = new Card();
+        card.setName("Alina");
+        card.setPin("1234");
+        return card;
     }
 }
