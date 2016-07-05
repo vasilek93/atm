@@ -24,7 +24,7 @@ public class Main {
 
 
     public static void addMoney(Atm atm){
-       // atm.addMoney();
+        atm.addMoney();
 
     }
 

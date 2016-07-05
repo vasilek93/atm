@@ -3,6 +3,5 @@
  */
 public interface Output {
 
-    void updateBalance(double withdrawMoney);
     void withdraw(double amount);
 }

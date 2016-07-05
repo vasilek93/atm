@@ -52,9 +52,14 @@ public class Atm {
     }
 
     public void withdraw() {
-        output.withdraw(display.getWithdrawAmount());
         serverConnection.updateBalance(-display.getWithdrawAmount());
+        output.withdraw(display.getWithdrawAmount());
+
     }
 
+    public void addMoney() {
+        serverConnection.updateBalance(input.insertMoney(200));
+
+    }
 }
 

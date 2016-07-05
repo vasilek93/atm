@@ -3,17 +3,9 @@
  */
 public class OutputImpl implements Output {
 
-    private double balance;
-    private Card card;
-
-
-    @Override
-    public void updateBalance(double withdrawMoney) {
-
-    }
-
     @Override
     public void withdraw(double amount) {
-        balance-=amount;
+
+        System.out.println("Take your "+ amount + " eur!");
     }
 }

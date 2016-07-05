@@ -19,7 +19,7 @@ public class DisplayImpl implements Display {
 
     @Override
     public double getWithdrawAmount() {
-        double amount = 250;
+        double amount = 50;
         System.out.println("You want to get: "+amount + " eur");
         return amount;
     }
