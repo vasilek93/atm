@@ -34,7 +34,6 @@ public class DisplayImpl implements Display {
         System.out.print("Please enter Your pin: ");
         Scanner s = new Scanner(System.in);
         pin = s.next();
-        //s.close();
         System.out.println("You entered pin: "+ pin);
     }
 
@@ -43,7 +42,6 @@ public class DisplayImpl implements Display {
         System.out.print("Please enter Your operation: ");
         Scanner s = new Scanner(System.in);
         operation = s.nextLine();
-        // s.close();
         System.out.println("Selected operation is:" + operation);
     }
 
@@ -52,7 +50,6 @@ public class DisplayImpl implements Display {
         System.out.print("Please enter amount You want to get/add: ");
         Scanner s = new Scanner(System.in);
         amount = Double.parseDouble(s.nextLine());
-        //s.close();
         System.out.println("You want to get/add: " + amount);
     }
 

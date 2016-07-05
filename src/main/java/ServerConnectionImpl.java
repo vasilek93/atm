@@ -6,7 +6,7 @@ public class ServerConnectionImpl implements ServerConnection {
 
     @Override
     public double getBalance() {
-        System.out.print("Your balance before operation is:" + balance);
+        System.out.println("Your balance before operation is:" + balance);
         return balance;
     }
 
@@ -14,7 +14,7 @@ public class ServerConnectionImpl implements ServerConnection {
     @Override
     public void updateBalance(double amount) {
         balance+=amount;
-        System.out.print("Your balance after operation is:" + balance);
+        System.out.println("Your balance after operation is:" + balance);
     }
 
 

@@ -11,7 +11,7 @@ public class Main {
 
         if (atm.checkPin()) {
             atm.askForOperation();
-            if (atm.selectOperation().equals("Give Money"))
+            if (atm.selectOperation().equals("Get Money"))
                 getMoney(atm);
             else
             if (atm.selectOperation().equals("Add Money"))
