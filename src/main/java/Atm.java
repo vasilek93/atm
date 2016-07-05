@@ -6,12 +6,12 @@ public class Atm {
     Input input;
     ServerConnection serverConnection;
 
-    public void insertCard(){
+    public void insertCard() {
         cardReader.waitForCard();
     }
 
 
-    public boolean checkPin(){
+    public boolean checkPin() {
         Card card = cardReader.getCard();
         String userPin = display.getUserPin();
         if (userPin.equals(card.getPin()))
@@ -20,17 +20,17 @@ public class Atm {
             return false;
     }
 
-    public String selectOperation(){
+    public String selectOperation() {
         String operation = display.getOperation();
         return operation;
     }
 
-    public double selectWithdrawlAmount(){
+    public double selectWithdrawlAmount() {
         double amount = display.getWithdrawlAmount();
         return amount;
     }
 
-    public boolean checkAmount(){
+    public boolean checkAmount() {
         double availableAmount = serverConnection.getAvailableAmount();
         if (selectWithdrawlAmount() < availableAmount)
             return true;
@@ -38,18 +38,9 @@ public class Atm {
             return false;
     }
 
-    public String showError(){
+    public String showError() {
         String s1 = display.getError();
         return s1;
     }
-
-
-
-
-
-
-
-
-
-
 }
+
