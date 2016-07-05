@@ -6,4 +6,6 @@ public interface Input {
     void updateBalance();
     double insertMoney();
 
+
+
 }

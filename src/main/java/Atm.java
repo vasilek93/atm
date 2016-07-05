@@ -1,5 +1,6 @@
 
 public class Atm {
+
     CardReader cardReader;
     Display display;
     Output output;
@@ -20,23 +21,27 @@ public class Atm {
             return false;
     }
 
+
+
     public String selectOperation() {
         String operation = display.getOperation();
         return operation;
     }
 
-    public double selectWithdrawlAmount() {
-        double amount = display.getWithdrawlAmount();
+    public double selectWithdrawAmount() {
+        double amount = display.getWithdrawAmount();
         return amount;
     }
 
     public boolean checkAmount() {
         double availableAmount = serverConnection.getAvailableAmount();
-        if (selectWithdrawlAmount() < availableAmount)
+        if (selectWithdrawAmount() < availableAmount)
             return true;
         else
             return false;
     }
+
+
 
     public String showError() {
         String s1 = display.getError();
