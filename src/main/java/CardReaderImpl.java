@@ -6,7 +6,7 @@ public class CardReaderImpl implements CardReader{
 
     @Override
     public void waitForCard() {
-        System.out.print("Please insert your card...");
+        System.out.println("Please insert your card...");
     }
 
     @Override
@@ -14,6 +14,7 @@ public class CardReaderImpl implements CardReader{
         Card card = new Card();
         card.setName("Alina");
         card.setPin("1234");
+        System.out.println("Card inserted!");
         return card;
     }
 }

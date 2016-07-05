@@ -4,8 +4,8 @@ public class Atm {
     CardReader cardReader = new CardReaderImpl();
     Display display = new DisplayImpl();
     Output output = new OutputImpl();
-    Input input;
-    ServerConnection serverConnection;
+    Input input = new InputImpl();
+    ServerConnection serverConnection = new ServerConnectionImpl();
 
     public void insertCard() {
         cardReader.waitForCard();
@@ -15,8 +15,10 @@ public class Atm {
     public boolean checkPin() {
         Card card = cardReader.getCard();
         String userPin = display.getUserPin();
-        if (userPin.equals(card.getPin()))
+        if (userPin.equals(card.getPin())) {
+            System.out.print("Your pin is correct!");
             return true;
+        }
         else
             return false;
     }
@@ -44,8 +46,8 @@ public class Atm {
     }
 
 
-    public String showError() {
-        String s1 = display.getError();
+    public String showError(String error) {
+        String s1 = display.showError(error);
         return s1;
     }
 

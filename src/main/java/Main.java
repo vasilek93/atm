@@ -5,10 +5,6 @@ public class Main {
 
     public static void main(String[] args) {
         Atm atm = new Atm();
-
-
-
-
         atm.insertCard();
         if (atm.checkPin()) {
             if (atm.selectOperation().equals("Give Money"))
@@ -18,7 +14,7 @@ public class Main {
             if (atm.selectOperation().equals("Take Money"))
                 showUserAmount(atm);
         }
-        else atm.showError();
+        else atm.showError("Incorrect pin!");
 
     }
 
@@ -33,7 +29,7 @@ public class Main {
             atm.withdraw();
         }
         else {
-            atm.showError();
+            atm.showError("Not enough money!");
         }
     }
 

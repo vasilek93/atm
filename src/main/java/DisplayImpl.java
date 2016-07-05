@@ -7,21 +7,27 @@ public class DisplayImpl implements Display {
 
     @Override
     public String getUserPin() {
-        return null;
+        System.out.println("You entered pin: 1234");
+        return "1234";
     }
 
     @Override
     public String getOperation() {
-        return null;
+        System.out.println("Selected operation is: Give Money");
+        return "Give Money";
     }
 
     @Override
     public double getWithdrawAmount() {
-        return 0;
+        double amount = 250;
+        System.out.println("You want to get: "+amount + " eur");
+        return amount;
     }
 
+
     @Override
-    public String getError() {
-        return null;
+    public String showError(String error) {
+        System.out.println(error);
+        return error;
     }
 }
