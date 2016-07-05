@@ -7,4 +7,6 @@ public interface Display {
     String getOperation();
 
     double getWithdrawlAmount();
+
+    String getError();
 }

@@ -11,6 +11,7 @@ public class CardReaderImpl implements CardReader{
 
     @Override
     public Card getCard() {
+
         return null;
     }
 }

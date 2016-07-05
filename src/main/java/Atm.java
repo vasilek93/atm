@@ -38,6 +38,13 @@ public class Atm {
             return false;
     }
 
+    public String showError(){
+        String s1 = display.getError();
+        return s1;
+    }
+
+
+
 
 
 
