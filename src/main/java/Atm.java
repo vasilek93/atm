@@ -29,7 +29,7 @@ public class Atm {
         double amount = display.getWithdrawlAmount();
         return amount;
     }
-
+    
 
 
 }
