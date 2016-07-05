@@ -4,8 +4,7 @@
 public interface Display {
     String getUserPin();
 
-
-    Operation getOperation();
+    String getOperation();
 
     double getWithdrawlAmount();
 }
