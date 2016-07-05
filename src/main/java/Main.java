@@ -11,7 +11,7 @@ public class Main {
             if (atm.selectOperation().equals("Give Money"))
                 giveMoney(atm);
             if (atm.selectOperation().equals("Take Money"))
-                takeMoney(atm);
+                addMoney(atm);
             if (atm.selectOperation().equals("Take Money"))
                 showUserAmount(atm);
         }
@@ -20,23 +20,22 @@ public class Main {
     }
 
 
-    public static void takeMoney(Atm atm){
-        if (atm.checkAmount()){
-            atm.withdraw();
-
-        }
-
+    public static void addMoney(Atm atm){
+        atm.addMoney();
 
     }
 
     public static void giveMoney(Atm atm){
-
+        if (atm.checkAmount()){
+            atm.withdraw();
+        }
+        else {
+            atm.showError();
+        }
     }
 
     public static void showUserAmount(Atm atm){
-
+        atm.getAvailableAmount();
     }
-
-
 
 }

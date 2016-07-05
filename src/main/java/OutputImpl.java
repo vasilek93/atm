@@ -1,7 +1,7 @@
 /**
  * Created by pavel.grigoryev on 7/5/2016.
  */
-public class OutputImp implements Output {
+public class OutputImpl implements Output {
 
     private double balance;
     private Card card;
