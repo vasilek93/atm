@@ -20,6 +20,8 @@ public class MainTest2 {
     ServerConnection serverConnection;
     @Mock
     Display display;
+    @Mock
+    Output output;
 
     @Test
     public void testAddMoney() throws Exception {
@@ -28,6 +30,16 @@ public class MainTest2 {
         when(input.insertMoney(AMOUNT)).thenReturn(AMOUNT);
         atm.addMoney();
         verify(serverConnection).updateBalance(AMOUNT);
+
+    }
+
+    @Test
+    public void testWithdraw() throws Exception {
+
+        when(display.getWithdrawAmount()).thenReturn(AMOUNT);
+        atm.withdraw();
+        verify(serverConnection).updateBalance(-AMOUNT);
+        verify(output).withdraw(AMOUNT);
 
     }
 }
