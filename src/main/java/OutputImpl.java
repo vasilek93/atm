@@ -7,3 +7,4 @@ public class OutputImpl implements Output {
         System.out.println("Take your "+ amount + " eur!");
     }
 }
+

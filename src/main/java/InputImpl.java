@@ -1,4 +1,3 @@
-
 public class InputImpl implements Input {
 
 

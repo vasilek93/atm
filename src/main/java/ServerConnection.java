@@ -5,3 +5,4 @@ public interface ServerConnection {
    public void updateBalance(double amount);
 
 }
+
