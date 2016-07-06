@@ -1,8 +1,5 @@
 import java.util.Scanner;
 
-/**
- * Created by alina.vasilevska on 7/5/2016.
- */
 public class CardReaderImpl implements CardReader{
 
     private Card card;

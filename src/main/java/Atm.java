@@ -1,11 +1,26 @@
+import com.google.inject.Inject;
 
 public class Atm {
 
-    CardReader cardReader = new CardReaderImpl();
-    Display display = new DisplayImpl();
-    Output output = new OutputImpl();
-    Input input = new InputImpl();
-    ServerConnection serverConnection = new ServerConnectionImpl();
+    @Inject
+    CardReader cardReader;
+    @Inject
+    Display display;
+    @Inject
+    Output output;
+    @Inject
+    Input input;
+    @Inject
+    ServerConnection serverConnection;
+
+    @Inject
+    public Atm(CardReader cardReader, ServerConnection serverConnection, Input input, Output output, Display display) {
+        this.cardReader = cardReader;
+        this.serverConnection = serverConnection;
+        this.input = input;
+        this.output = output;
+        this.display = display;
+    }
 
     public void insertCard() {
         cardReader.waitForCard();

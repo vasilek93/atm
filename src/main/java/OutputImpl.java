@@ -1,6 +1,4 @@
-/**
- * Created by pavel.grigoryev on 7/5/2016.
- */
+
 public class OutputImpl implements Output {
 
     @Override

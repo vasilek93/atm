@@ -1,12 +1,14 @@
-import java.util.Scanner;
+import com.google.inject.Guice;
+import com.google.inject.Injector;
 
-/**
- * Created by alina.vasilevska on 7/5/2016.
- */
+import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        Atm atm = new Atm();
+
+        Injector injector = Guice.createInjector(new AtmModule());
+        Atm atm = injector.getInstance(Atm.class);
+
         Card card = new Card();
         atm.insertCard();
         atm.askForPin();
