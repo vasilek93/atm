@@ -37,9 +37,11 @@ public class MainTest2 {
     public void testWithdraw() throws Exception {
 
         when(display.getWithdrawAmount()).thenReturn(AMOUNT);
+
         atm.withdraw();
         verify(serverConnection).updateBalance(-AMOUNT);
         verify(output).withdraw(AMOUNT);
+
 
     }
 }
